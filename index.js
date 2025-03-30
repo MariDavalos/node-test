@@ -6,6 +6,10 @@ app.use(layouts)
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs")
 
+const form = require("./routes/formRoute")
+
+app.use("/create", form)
+
 app.get("/", (req, res) => {
   res.render(
     "index",

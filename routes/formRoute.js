@@ -1,0 +1,12 @@
+const express = require("express")
+const router = express.Router()
+
+router.post("/", () => {
+  console.log("gaaaaaa")
+})
+
+router.get("/", (req, res) => {
+  res.render("form")
+})
+
+module.exports = router
